@@ -13,6 +13,9 @@ public class Cliente {
 	private Endereco endereco;
 	private List<Venda> listaCompra;
 	
+	public Cliente() {
+		
+	}
 	
 	public Cliente(long idCliente, String nome, Date dataNascimento, String telefone, String cPF, Endereco endereco,
 			List<Venda> listaCompra) {
@@ -67,6 +70,14 @@ public class Cliente {
 	public void setListaCompra(List<Venda> listaCompra) {
 		this.listaCompra = listaCompra;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [idCliente=" + idCliente + ", \n\tnome=" + nome + ", \n\tdataNascimento=" + dataNascimento
+				+ ", \n\ttelefone=" + telefone + ", \n\tCPF=" + CPF + ", \n\tendereco=" + endereco.toString() + ", \n\tlistaCompra=" + listaCompra
+				+ "]";
+	}
+	
 	
 	
 
