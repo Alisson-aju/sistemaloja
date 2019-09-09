@@ -11,6 +11,9 @@ public class Estado {
 		this.sigla = sigla;
 	}
 
+	public Estado() {
+	}
+
 	public String getNome() {
 		return nome;
 	}

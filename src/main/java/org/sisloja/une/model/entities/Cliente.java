@@ -14,13 +14,12 @@ public class Cliente {
 	private List<Venda> listaCompra;
 	
 	public Cliente() {
+		endereco = new Endereco();
 		
 	}
 	
-	public Cliente(long idCliente, String nome, Date dataNascimento, String telefone, String cPF, Endereco endereco,
+	public Cliente(String nome, Date dataNascimento, String telefone, String cPF, Endereco endereco,
 			List<Venda> listaCompra) {
-		super();
-		this.idCliente = idCliente;
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;

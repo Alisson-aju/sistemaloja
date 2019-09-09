@@ -12,6 +12,10 @@ public class Cidade {
 		this.estado = estado;
 	}
 	
+	public Cidade() {
+		estado = new Estado();
+	}
+
 	public String getNome() {
 		return nome;
 	}

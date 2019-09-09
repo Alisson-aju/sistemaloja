@@ -12,9 +12,10 @@ public class Venda {
 	private Date dataVenda;
 	private List<ItemVenda> listaItens;
 	private float comissao;
+	private Departamento departamento;
 	
 	
-	public Venda(double valorTotal, long codRegistroVenda, Cliente cliente, Vendedor vendedor, Date dataVenda,
+	public Venda(double valorTotal, long codRegistroVenda,Departamento departamento,  Cliente cliente, Vendedor vendedor, Date dataVenda,
 			List<ItemVenda> listaItens, float comissao) {
 		super();
 		this.valorTotal = valorTotal;
@@ -24,6 +25,7 @@ public class Venda {
 		this.dataVenda = dataVenda;
 		this.listaItens = listaItens;
 		this.comissao = comissao;
+		this.departamento = departamento;
 	}
 	
 	public void adicionarProduto(Produto produto, int quantidade, float desconto) {
@@ -49,6 +51,18 @@ public class Venda {
 	public void removerProduto(ItemVenda item) {
 		this.listaItens.remove(item);
 	}
+	
+	
+	
+	
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+
 	public double getValorTotal() {
 		return valorTotal;
 	}

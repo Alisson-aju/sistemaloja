@@ -18,6 +18,10 @@ public class Endereco {
 		this.cep = cep;
 	}
 	
+	public Endereco() {
+		cidade = new Cidade();
+	}
+
 	public String getRua() {
 		return rua;
 	}
