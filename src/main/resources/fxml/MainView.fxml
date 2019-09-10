@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sisloja.une.controller.MainViewController">
+   <children>
+      <JFXHamburger fx:id="hamburger" prefHeight="28.0" prefWidth="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="80.0" layoutY="-6.0" prefHeight="400.0" prefWidth="115.0" />
+   </children>
+</AnchorPane>

@@ -13,26 +13,25 @@ import java.io.IOException;
  */
 public class App extends Application {
 
+	@Override
+	public void start(Stage stage) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainView.fxml"));
 
-    @Override
-    public void start(Stage stage) throws IOException {
+			Scene scene = new Scene(root);
 
-    }
+			stage.setScene(scene);
+			stage.setMaximized(true);
+			stage.setTitle("UNE Loja de Departamento");
+			stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
-
-
-    /**
-     * Carrega uma view .fxml e gera um Parent node
-     * @param absolutePath
-     * @return Parent node a partir do FXML
-     */
-    private static Parent loadFXML(String absolutePath) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(absolutePath));
-        return fxmlLoader.load();
-    }
-
-    public static void main(String[] args) {
-        launch();
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
 }
