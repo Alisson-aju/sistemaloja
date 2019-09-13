@@ -44,11 +44,15 @@ public class SideBarController implements Initializable{
 	}
 	
 	@FXML
-	private void changeView(ActionEvent e) {
+	private void changeViewActionEvent(ActionEvent e) {
 		JFXButton whoGenerated = (JFXButton) e.getSource();
 		myMainViewController.changeMainPane(whoGenerated.getId());
 	}
 
+	@FXML
+	private void exitActionEvent(ActionEvent e) {
+		System.exit(0);
+	}
 
 
 	public void init(MainViewController mainViewController) {

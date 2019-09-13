@@ -7,9 +7,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="333.0" layoutY="293.0" text="Teste Departamento" />
+      <Label layoutX="355.0" layoutY="293.0" text="Teste Produto" />
    </children>
 </AnchorPane>

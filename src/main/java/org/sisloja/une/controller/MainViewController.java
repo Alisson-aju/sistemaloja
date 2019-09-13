@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import org.sisloja.une.gui.util.Alerts;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
@@ -14,8 +15,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -26,6 +29,8 @@ public class MainViewController implements Initializable {
 	@FXML
 	private AnchorPane anchorPane;
 
+	@FXML
+	private Pane backPane;
 
 	@FXML
 	private JFXDrawer drawer;
@@ -70,19 +75,28 @@ public class MainViewController implements Initializable {
 
 	}
 
+	//Changes views according to option from sidebar
 	public void changeMainPane(String sourceId) {
 
 		if(sourceId.equals("btnDepartamentos")) {
-			//mainPane.setCenter(load("/fxml/DepartamentosView.fxml"));
-			AnchorPane pane = (AnchorPane) load("/fxml/DepartamentosView.fxml");
-			anchorPane.getChildren().setAll(pane);
+			AnchorPane newPane =  load("/fxml/DepartamentosView.fxml");
+			//Group view = new Group(new JFXButton("HI"), new Label("ola"));
+			
+			backPane.getChildren().setAll(newPane);
+			
+		}
+		if(sourceId.equals("btnProdutos")) {
+			AnchorPane newPane =  load("/fxml/ProdutosView.fxml");
+			//Group view = new Group(new JFXButton("HI"), new Label("ola"));
+			
+			backPane.getChildren().setAll(newPane);
 			
 		}
 		
 	}
 	
-	private Parent load(String location) {
-		Parent node = null;
+	private AnchorPane load(String location) {
+		AnchorPane node = null;
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(location));
 			node = loader.load();

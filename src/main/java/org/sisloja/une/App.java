@@ -21,7 +21,7 @@ public class App extends Application {
 			Scene scene = new Scene(root);
 
 			stage.setScene(scene);
-			stage.setMaximized(true);
+			//stage.setMaximized(true);
 			stage.setTitle("UNE Loja de Departamento");
 			stage.show();
 		} catch (IOException e) {

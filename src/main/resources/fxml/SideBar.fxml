@@ -9,13 +9,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="178.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sisloja.une.controller.SideBarController">
+<VBox prefHeight="400.0" prefWidth="172.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sisloja.une.controller.SideBarController">
    <children>
-      <JFXButton fx:id="btnVendas" buttonType="RAISED" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Vendas" />
-      <JFXButton fx:id="btnVendedores" buttonType="RAISED" layoutX="10.0" layoutY="123.0" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Vendedores" />
-      <JFXButton fx:id="btnProdutos" buttonType="RAISED" layoutX="10.0" layoutY="197.0" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Produtos" />
-      <JFXButton fx:id="btnDepartamentos" buttonType="RAISED" onAction="#changeView" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Departamentos" />
-      <JFXButton fx:id="btnRelatorios" buttonType="RAISED" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Relatorios" />
-      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="10.0" layoutY="271.0" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Sair" />
+      <JFXButton fx:id="btnVendas" buttonType="RAISED" onAction="#changeViewActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Vendas" />
+      <JFXButton fx:id="btnVendedores" buttonType="RAISED" layoutX="10.0" layoutY="123.0" onAction="#changeViewActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Vendedores" />
+      <JFXButton fx:id="btnProdutos" buttonType="RAISED" layoutX="10.0" layoutY="197.0" onAction="#changeViewActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Produtos" />
+      <JFXButton fx:id="btnDepartamentos" buttonType="RAISED" onAction="#changeViewActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Departamentos" />
+      <JFXButton fx:id="btnRelatorios" buttonType="RAISED" onAction="#changeViewActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Relatorios" />
+      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="10.0" layoutY="271.0" onAction="#exitActionEvent" prefHeight="100.0" prefWidth="500.0" ripplerFill="#ffc13b" style="-fx-background-color: #f1f1f1;" text="Sair" />
    </children>
 </VBox>
