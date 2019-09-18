@@ -27,6 +27,10 @@ public class Vendedor {
 		this.dataAdmissao = dataAdmissao;
 	}
 
+	public Vendedor() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Departamento getDepartamento() {
 		return departamento;
 	}

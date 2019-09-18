@@ -21,6 +21,10 @@ public class Departamento {
 		this.listaDeVendedores = listaDeVendedores;
 	}
 	
+	public Departamento() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getCodDepartamento() {
 		return codDepartamento;
 	}
@@ -57,6 +61,14 @@ public class Departamento {
 	public void setListaDeVendedores(List<Vendedor> listaDeVendedores) {
 		this.listaDeVendedores = listaDeVendedores;
 	}
+
+	@Override
+	public String toString() {
+		return "Departamento [codDepartamento=" + codDepartamento + ", vendedorChefe=" + vendedorChefe + ", sigla="
+				+ sigla + ", nome=" + nome + ", percentualDeComissao=" + percentualDeComissao + ", listaDeVendedores="
+				+"]";
+	}
+	
 	
 	
 	

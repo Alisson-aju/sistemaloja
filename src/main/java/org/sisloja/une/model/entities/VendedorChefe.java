@@ -16,6 +16,10 @@ public class VendedorChefe extends Vendedor{
 		this.graduacao = graduacao;
 	}
 
+	public VendedorChefe() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getGraduacao() {
 		return graduacao;
 	}
@@ -30,6 +34,11 @@ public class VendedorChefe extends Vendedor{
 
 	public void setDataInicioChefia(Date dataInicioChefia) {
 		this.dataInicioChefia = dataInicioChefia;
+	}
+
+	@Override
+	public String toString() {
+		return "VendedorChefe [dataInicioChefia=" + dataInicioChefia + ", graduacao=" + graduacao + "]";
 	}
 
 	
