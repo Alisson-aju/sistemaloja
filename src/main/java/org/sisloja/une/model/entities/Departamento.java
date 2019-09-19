@@ -63,7 +63,7 @@ public class Departamento {
 
 	@Override
 	public String toString() {
-		return "Departamento [codDepartamento=" + codDepartamento + ", vendedorChefe=" + vendedorChefe + ", sigla="
+		return "Departamento [codDepartamento=" + codDepartamento + ", vendedorChefe=" + vendedorChefe.getNome() + ", sigla="
 				+ sigla + ", nome=" + nome + ", percentualDeComissao=" + percentualDeComissao + ", listaDeVendedores="
 				+"]";
 	}
