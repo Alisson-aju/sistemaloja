@@ -9,7 +9,7 @@ public class VendedorChefe extends Vendedor{
 	
 	
 
-	public VendedorChefe(Departamento departamento, int codMatricula, String nome, long cpf, long rg, boolean ativo,
+	public VendedorChefe(Departamento departamento, int codMatricula, String nome, String cpf, String rg, boolean ativo,
 			double salario, Date dataAdmissao, Date dataInicioChefia, String graduacao) {
 		super(departamento, codMatricula, nome, cpf, rg, ativo, salario, dataAdmissao);
 		this.dataInicioChefia = dataInicioChefia;
@@ -38,7 +38,7 @@ public class VendedorChefe extends Vendedor{
 
 	@Override
 	public String toString() {
-		return "VendedorChefe [dataInicioChefia=" + dataInicioChefia + ", graduacao=" + graduacao + "]";
+		return " [nome= "+ getNome() +", " + "dataInicioChefia=" + dataInicioChefia + ", graduacao=" + graduacao + "]";
 	}
 
 	

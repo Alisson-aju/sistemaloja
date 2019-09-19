@@ -10,10 +10,9 @@ public class Departamento {
 	private double percentualDeComissao;
 	private List<Vendedor> listaDeVendedores;
 	
-	public Departamento(int codDepartamento, VendedorChefe vendedorChefe, String sigla, String nome,
+	public Departamento(VendedorChefe vendedorChefe, String sigla, String nome,
 			double percentualDeComissao, List<Vendedor> listaDeVendedores) {
 		super();
-		this.codDepartamento = codDepartamento;
 		this.vendedorChefe = vendedorChefe;
 		this.sigla = sigla;
 		this.nome = nome;

@@ -6,15 +6,15 @@ public class Vendedor {
 	private Departamento departamento;
 	private int codMatricula;
 	private String nome;
-	private long cpf;
-	private long rg;
+	private String cpf;
+	private String rg;
 	private boolean ativo;
 	private double salario;
 	private Date dataAdmissao;
 	
 	
 
-	public Vendedor(Departamento departamento, int codMatricula, String nome, long cpf, long rg, boolean ativo,
+	public Vendedor(Departamento departamento, int codMatricula, String nome, String cpf, String rg, boolean ativo,
 			double salario, Date dataAdmissao) {
 		super();
 		this.departamento = departamento;
@@ -55,19 +55,19 @@ public class Vendedor {
 		this.nome = nome;
 	}
 
-	public long getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(long cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
-	public long getRg() {
+	public String getRg() {
 		return rg;
 	}
 
-	public void setRg(long rg) {
+	public void setRg(String rg) {
 		this.rg = rg;
 	}
 
