@@ -86,6 +86,15 @@ public class Vendedor {
 	public void setDataAdmissao(Date dataAdmissao) {
 		this.dataAdmissao = dataAdmissao;
 	}
+
+	@Override
+	public String toString() {
+		return "Vendedor [departamento=" + departamento.getNome() + ", codMatricula=" + codMatricula + ", nome=" + nome + ", cpf="
+				+ cpf + ", rg=" + rg + ", ativo=" + ativo + ", salario=" + salario + ", dataAdmissao=" + dataAdmissao
+				+ "]";
+	}
+	
+	
 	
 	
 	
