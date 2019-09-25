@@ -18,6 +18,10 @@ public class Produto {
 		this.departamento = departamento;
 	}
 	
+	public Produto() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getCodProduto() {
 		return codProduto;
 	}

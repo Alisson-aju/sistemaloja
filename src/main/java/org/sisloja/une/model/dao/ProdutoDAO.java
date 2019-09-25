@@ -1,7 +1,6 @@
 package org.sisloja.une.model.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +19,7 @@ public class ProdutoDAO {
 		con = DatabaseConector.getInstance().getConnection();
 	}
 	
-	public Produto buscar(int cod) throws SQLExcepcion {
+	public Produto buscar(int cod) throws SQLException{
 		
 		String sql = "SELECT * FROM PRODUTO WHERE cod_produto";
 		openConnection();
@@ -29,12 +28,12 @@ public class ProdutoDAO {
 		ps.setInt(1, cod);
 		ResultSet rs = ps.executeQuery();
 		
-		Produto result = null
+		Produto result = null;
 				
 		if(rs.next()) {
-			result new Produto();
+			result = new Produto();
 			result.setCodProduto(rs.getInt("codProduto"));
-			result.setDepartamento(rs.getString("departamento"));
+			//result.setDepartamento(rs.getString("departamento"));
 			result.setDescricao(rs.getString("descricao"));
 			result.setNome(rs.getString("nome"));
 			result.setPrecoDeVenda(rs.getDouble("preçoDeVenda"));
@@ -57,7 +56,7 @@ public class ProdutoDAO {
 		openConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
 
-		ps.setString(1, produto.getDepartamento());
+		//ps.setString(1, produto.getDepartamento());
 		ps.setString(2, produto.getDescricao());
 		ps.setString(3, produto.getNome());
 		ps.setDouble(4, produto.getPrecoDeVenda());
@@ -90,7 +89,7 @@ public class ProdutoDAO {
 		
 		PreparedStatement ps = con.prepareStatement(sql);
 
-		ps.setString(1, produto.getDepartamento());
+		//ps.setString(1, produto.getDepartamento());
 		ps.setString(2, produto.getDescricao());
 		ps.setString(3, produto.getNome());
 		ps.setDouble(4, produto.getPrecoDeVenda());
