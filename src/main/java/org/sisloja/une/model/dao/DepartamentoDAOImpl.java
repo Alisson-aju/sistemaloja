@@ -22,9 +22,7 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
 		DepartamentoDAOImpl dDao = new DepartamentoDAOImpl();
 		try {
 			Departamento dep = dDao.buscar(1);
-			dep.setNome("CONGELADOS");
-			System.out.println(dep.getNome());
-			dDao.atualizar(dep);
+			System.out.println(dep.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

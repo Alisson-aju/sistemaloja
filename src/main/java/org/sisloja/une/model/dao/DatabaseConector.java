@@ -11,17 +11,16 @@ public class DatabaseConector {
 	//unica instancia
 	private static DatabaseConector instance;
 	private Connection connection;
-    private String url = "jdbc:hsqldb:file:./db";
-    private String username = "admin";
-    private String password = "admin";
 
     private DatabaseConector() throws SQLException {
-        try {
-        	Class.forName("org.hsqldb.jdbcDriver");
-            this.connection = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException ex) {
-            System.out.println("Conexão falhou: " + ex.getMessage());
-        }
+    	try {
+			Class.forName("org.h2.Driver");
+        connection = DriverManager.getConnection("jdbc:h2:./storage/db");
+        System.out.println("*");
+    	} catch (ClassNotFoundException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}
     }
 
     public Connection getConnection() {
@@ -46,12 +45,7 @@ public class DatabaseConector {
 	
 	public static void main(String[] args) {
 		Connection connection = DatabaseConector.getInstance().getConnection();
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 
 	}
 

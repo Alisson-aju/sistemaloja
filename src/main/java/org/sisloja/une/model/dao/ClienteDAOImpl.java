@@ -174,8 +174,7 @@ public class ClienteDAOImpl implements ClienteDAO {
 		ClienteDAOImpl clienteDao = new ClienteDAOImpl();
 		try {
 			Cliente cliente = clienteDao.buscar(1);
-			cliente.setNome("Bruninha");
-			clienteDao.atualizar(cliente);
+			System.out.println(cliente.toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

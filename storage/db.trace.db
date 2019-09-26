@@ -1,0 +1,305 @@
+2019-09-25 23:16:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:16:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:17:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:17:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:18:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM PUBLIC.CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:18:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM PUBLIC.CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:18:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM PUBLIC.CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:29:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:31:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:31:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM PUBLIC.CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:31:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM 'CLIENTE'[*] WHERE ID_CLIENTE=? "; expected "identifier"; SQL statement:
+SELECT * FROM 'CLIENTE' WHERE id_cliente=? [42001-199]
+2019-09-25 23:32:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+SELECT * FROM CLIENTE WHERE id_cliente=? [42102-199]
+2019-09-25 23:36:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "SYSTEM_SEQUENCE_6AE52F3C_2D6A_4493_8B1B_6E26191A4237" not found; SQL statement:
+CREATE TABLE PUBLIC.CLIENTE (
+	ID_CLIENTE BIGINT DEFAULT (NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_6AE52F3C_2D6A_4493_8B1B_6E26191A4237") NOT NULL AUTO_INCREMENT,
+	CPF VARCHAR(11),
+	NOME VARCHAR(100) NOT NULL,
+	DATA_NASCIMENTO DATE,
+	TELEFONE VARCHAR(15),
+	CIDADE VARCHAR(30),
+	ESTADO VARCHAR(30),
+	RUA VARCHAR(40),
+	NUMERO VARCHAR(10),
+	CEP VARCHAR(10),
+	BAIRRO VARCHAR(20),
+	UF VARCHAR(2),
+	CONSTRAINT CLIENTE_PK PRIMARY KEY (ID_CLIENTE)
+) [90036-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.schema.Schema.getSequence(Schema.java:588)
+	at org.h2.command.Parser.readSequence(Parser.java:7189)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:4192)
+	at org.h2.command.Parser.readTerm(Parser.java:3972)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.readTerm(Parser.java:4006)
+	at org.h2.command.Parser.readFactor(Parser.java:3090)
+	at org.h2.command.Parser.readSum(Parser.java:3077)
+	at org.h2.command.Parser.readConcat(Parser.java:3047)
+	at org.h2.command.Parser.readCondition(Parser.java:2900)
+	at org.h2.command.Parser.readAnd(Parser.java:2872)
+	at org.h2.command.Parser.readExpression(Parser.java:2864)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5284)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:7932)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:7832)
+	at org.h2.command.Parser.parseCreate(Parser.java:5818)
+	at org.h2.command.Parser.parsePrepared(Parser.java:846)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:338)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:467)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:407)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:146)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:405)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.run(SQLQueryJob.java:218)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2019-09-25 23:36:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found; SQL statement:
+CREATE UNIQUE INDEX PRIMARY_KEY_90 ON PUBLIC.CLIENTE (ID_CLIENTE) [42102-199]
+2019-09-25 23:37:58 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.sisloja.une.model.dao.DatabaseConector.<init>(DatabaseConector.java:18)
+	at org.sisloja.une.model.dao.DatabaseConector.getInstance(DatabaseConector.java:33)
+	at org.sisloja.une.model.dao.DatabaseConector.main(DatabaseConector.java:47)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 21 more
+2019-09-25 23:38:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO CLIENTE VALUES('22233344321','Bruninha','1978-10-22','07988665472','ARACAJU','SERGIPE','Rua Albuquerque','256','77687656','ATALAIA','SE')
+ [21002-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:338)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:467)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$0(SQLQueryJob.java:407)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:146)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:405)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:849)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:2727)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:98)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:146)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:96)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:102)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2019-09-26 18:46:14 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.sisloja.une.model.dao.DatabaseConector.<init>(DatabaseConector.java:18)
+	at org.sisloja.une.model.dao.DatabaseConector.getInstance(DatabaseConector.java:33)
+	at org.sisloja.une.model.dao.ClienteDAOImpl.openConnection(ClienteDAOImpl.java:26)
+	at org.sisloja.une.model.dao.ClienteDAOImpl.buscar(ClienteDAOImpl.java:32)
+	at org.sisloja.une.model.dao.ClienteDAOImpl.main(ClienteDAOImpl.java:176)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 29 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 23 more
+2019-09-26 18:52:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CLIENTE VALUES(1,'22233344321','Bruninha','1978-10-22','07988665472','ARACAJU','SERGIPE','Rua Albuquerque','256','77687656','ATALAIA','SE')
+INSERT[*] INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE)"; SQL statement:
+INSERT INTO CLIENTE VALUES(1,'22233344321','Bruninha','1978-10-22','07988665472','ARACAJU','SERGIPE','Rua Albuquerque','256','77687656','ATALAIA','SE')
+INSERT INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE) [42000-199]
+2019-09-26 18:52:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CLIENTE VALUES('22233344321','Bruninha','1978-10-22','07988665472','ARACAJU','SERGIPE','Rua Albuquerque','256','77687656','ATALAIA','SE')
+INSERT[*] INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE)"; SQL statement:
+INSERT INTO CLIENTE VALUES('22233344321','Bruninha','1978-10-22','07988665472','ARACAJU','SERGIPE','Rua Albuquerque','256','77687656','ATALAIA','SE')
+INSERT INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE) [42000-199]
+2019-09-26 18:53:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT[*] INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE)"; SQL statement:
+INSERT INTO DEPARTAMENTO VALUES('FRI','CONGELADOS',887887,1,0.5E0)
+INSERT INTO VENDEDOR VALUES(887887,'11892288401','875675','1999-09-09',1,'JULIO',TRUE) [42000-199]
+2019-09-26 18:57:58 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.sisloja.une.model.dao.DatabaseConector.<init>(DatabaseConector.java:18)
+	at org.sisloja.une.model.dao.DatabaseConector.getInstance(DatabaseConector.java:33)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.openConnection(DepartamentoDAOImpl.java:36)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.buscar(DepartamentoDAOImpl.java:45)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.main(DepartamentoDAOImpl.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 29 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 23 more
+2019-09-26 18:59:34 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.sisloja.une.model.dao.DatabaseConector.<init>(DatabaseConector.java:18)
+	at org.sisloja.une.model.dao.DatabaseConector.getInstance(DatabaseConector.java:33)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.openConnection(DepartamentoDAOImpl.java:35)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.buscar(DepartamentoDAOImpl.java:44)
+	at org.sisloja.une.model.dao.DepartamentoDAOImpl.main(DepartamentoDAOImpl.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 29 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/aquila/git/sistemaloja/storage/db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 23 more
